@@ -71,7 +71,7 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Tài Khoản Xịn Book",
+          "anchor": "Documentation",
           "href": "https://mintlify.com/docs",
           "icon": "book-open-cover"
         },
