@@ -1,0 +1,30 @@
+---
+title: "Cấu trúc thư mục"
+description: "Cách tổ chức file trong dự án"
+---
+
+Dưới đây là cấu trúc thư mục chính của dự án `Client`:
+
+```
+Client/
+├── public/                 # Các file tĩnh (images, fonts, ...)
+├── src/
+│   ├── app/                # Next.js App Router (Pages & Layouts)
+│   │   ├── (user)/         # Các trang dành cho người dùng
+│   │   ├── auth/           # Các trang xác thực (Login, Register...)
+│   │   └── ...
+│   ├── assets/             # Assets (images, icons) được import trong code
+│   ├── components/         # Các React Components tái sử dụng
+│   ├── config/             # Các cấu hình chung (App config, API endpoints...)
+│   ├── contexts/           # React Contexts
+│   ├── data/               # Dữ liệu tĩnh (nếu có)
+│   ├── hooks/              # Custom React Hooks
+│   ├── redux/              # Redux slices, store configuration
+│   ├── services/           # Các hàm gọi API (API services)
+│   ├── styles/             # Global styles, variables
+│   ├── types/              # TypeScript Type definitions
+│   └── utils/              # Các hàm tiện ích (helpers)
+├── .env                    # Biến môi trường
+├── next.config.js          # Cấu hình Next.js
+└── package.json            # Dependencies và Scripts
+```

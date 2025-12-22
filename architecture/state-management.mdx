@@ -1,0 +1,36 @@
+---
+title: "Quản lý State"
+description: "Cách sử dụng Redux và SWR trong dự án"
+---
+
+Dự án sử dụng kết hợp **Redux Toolkit** cho global state và **SWR** cho server state.
+
+## Redux Toolkit
+
+Redux được dùng để lưu trữ các thông tin mang tính toàn cục và ít thay đổi liên tục từ server, hoặc cần chia sẻ giữa nhiều component không có quan hệ cha con trực tiếp.
+
+Vị trí: `src/redux/`
+
+Các Slice chính (dự kiến):
+- `authSlice`: Lưu thông tin user đăng nhập, token.
+- `cartSlice`: Lưu thông tin giỏ hàng.
+- `settingSlice`: Cấu hình giao diện (theme, language...).
+
+### Cấu hình Store
+
+Store được cấu hình tại `src/redux/store.ts` (hoặc tương tự), kết hợp với **redux-persist** để lưu dữ liệu quan trọng vào LocalStorage.
+
+## SWR (Stale-While-Revalidate)
+
+SWR được sử dụng để fetch dữ liệu từ API. Nó giúp:
+- Caching kết quả request.
+- Tự động revalidate (cập nhật) dữ liệu khi focus lại tab hoặc sau 1 khoảng thời gian.
+- Đơn giản hóa việc xử lý loading/error state.
+
+Ví dụ sử dụng hook:
+
+```ts
+import useSWR from 'swr';
+
+const { data, error, isLoading } = useSWR('/api/user', fetcher);
+```

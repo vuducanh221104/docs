@@ -1,0 +1,18 @@
+---
+title: "Xác thực (Auth)"
+description: "Đăng ký, Đăng nhập và Bảo mật"
+---
+
+Hệ thống cung cấp các chức năng xác thực người dùng đầy đủ.
+
+## Các trang
+
+- **Đăng nhập (`/auth/login`)**: Cho phép người dùng đăng nhập bằng Email/Password.
+- **Đăng ký (`/auth/register`)**: Tạo tài khoản mới.
+- **Quên mật khẩu**: Khôi phục tài khoản qua email.
+
+## Cơ chế
+
+1. **JWT**: Sử dụng JSON Web Token để xác thực các request. Token được lưu trữ an toàn (thường là Cookie hoặc LocalStorage).
+2. **Middleware**: Next.js Middleware (`src/middleware.ts`) được sử dụng để bảo vệ các route private (ví dụ: trang cá nhân, lịch sử mua hàng). Nếu chưa đăng nhập, user sẽ bị redirect về trang login.
+3. **Bảo mật**: Sử dụng `react-turnstile` để chống spam/bot tại các form đăng ký/đăng nhập.

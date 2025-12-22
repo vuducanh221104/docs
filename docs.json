@@ -3,84 +3,51 @@
   "theme": "mint",
   "name": "Tài Khoản Xịn",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#008fd0",
+    "light": "#38bdf8",
+    "dark": "#0284c7"
   },
   "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Hướng dẫn",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Bắt đầu",
             "pages": [
               "index",
-              "quickstart",
-              "development"
+              "guides/registration",
+              "guides/account-management",
+              "guides/security"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Mua sắm",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
-          {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "guides/buying",
+              "guides/payment",
+              "guides/orders"
             ]
           }
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "Hỗ trợ",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "Thông tin",
             "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "support/faq",
+              "support/contact",
+              "support/policy"
             ]
           }
         ]
       }
     ],
     "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
+      "anchors": []
     }
   },
   "logo": {
@@ -90,33 +57,26 @@
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "Liên hệ",
+        "href": "https://taikhoanxin.com/contact"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Vào cửa hàng",
+      "href": "https://taikhoanxin.com"
     }
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view"
+    ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "facebook": "https://facebook.com",
+      "telegram": "https://t.me"
     }
   }
 }
